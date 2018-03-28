@@ -1,3 +1,46 @@
 version: 2
 
 jobs:
+  build:
+    docker:
+      - image: circleci/node:6
+    environment:
+      - ENV: "development"
+    working_directory: ~/node-mocha-chai-lib
+    branches:
+      only:
+        - master
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install package dependencies
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+  test:
+    docker:
+      - image: circleci/node:6
+    environment:
+      - ENV: "test"
+    working_directory: ~/node-mocha-chai-lib
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: yarn test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
