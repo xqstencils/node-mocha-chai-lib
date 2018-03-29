@@ -5,6 +5,7 @@ This is a stencils for common package base on node.
 
 [![NPM Version](https://img.shields.io/npm/v/node-mocha-chai-lib.svg)](https://npmjs.org/package/node-mocha-chai-lib)
 [![NPM Downloads](https://img.shields.io/npm/dm/node-mocha-chai-lib.svg)](https://npmjs.org/package/node-mocha-chai-lib)
+[![CircleCI](https://circleci.com/gh/xqstencils/node-mocha-chai-lib.svg?style=svg)](https://circleci.com/gh/xqstencils/node-mocha-chai-lib)
 [![Build Status](https://travis-ci.org/xqstencils/node-mocha-chai-lib.svg?branch=master)](https://travis-ci.org/xqstencils/node-mocha-chai-lib)
 
 [![NPM](https://nodei.co/npm/node-mocha-chai-lib.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-mocha-chai-lib/)
