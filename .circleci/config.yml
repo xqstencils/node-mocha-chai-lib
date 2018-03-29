@@ -4,12 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:6
-    environment:
-      - ENV: "development"
     working_directory: ~/node-mocha-chai-lib
-    branches:
-      only:
-        - master
     steps:
       - checkout
       - restore_cache:
@@ -24,8 +19,6 @@ jobs:
   test:
     docker:
       - image: circleci/node:6
-    environment:
-      - ENV: "test"
     working_directory: ~/node-mocha-chai-lib
     steps:
       - checkout
