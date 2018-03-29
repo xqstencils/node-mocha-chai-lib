@@ -3,6 +3,11 @@ set -e -u
 
 CURRENT_VERSION=`cat package.json | jq -r .version`
 
+name=$(git log -1 --pretty=format:"%an")
+email=$(git log -1 --pretty=format:"%ae")
+git config user.name "$name"
+git config user.email "$email"
+
 git fetch --tags
 
 if [ `git branch | grep tmp-release` ]; then
