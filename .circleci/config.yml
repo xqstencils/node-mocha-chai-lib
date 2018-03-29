@@ -22,6 +22,8 @@ jobs:
     working_directory: ~/node-mocha-chai-lib
     steps:
       - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Test
           command: yarn test
