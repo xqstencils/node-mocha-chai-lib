@@ -28,7 +28,7 @@ jobs:
           name: Test
           command: yarn test
 
-  release-git:
+  release:
     docker:
       - image: circleci/node:6
     working_directory: ~/node-mocha-chai-lib
