@@ -28,7 +28,7 @@ jobs:
           name: Test
           command: yarn test
 
-  release:
+  release-git:
     docker:
       - image: circleci/node:6
     working_directory: ~/node-mocha-chai-lib
@@ -37,15 +37,21 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
+          name: Set Config
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run:
           name: Compile
           command: yarn build
       - run:
           name: Git release
           command: yarn release:git
+      - run:
+          name: Npm release
+          command: yarn release:npm
 
 workflows:
   version: 2
-  build_and_test:
+  build_test_deploy:
     jobs:
       - build
       - test:
