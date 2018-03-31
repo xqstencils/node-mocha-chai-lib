@@ -1,6 +1,6 @@
 {
   "name": "node-mocha-chai-lib",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Stencil based on node with mocha and chai",
   "main": "lib/index.js",
   "engines": {
