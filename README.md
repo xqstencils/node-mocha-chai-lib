@@ -3,17 +3,16 @@ This is a stencils for common package base on node.
 
 ## Current Status:
 
-[![NPM Version](https://img.shields.io/npm/v/node-mocha-chai-lib.svg)](https://npmjs.org/package/node-mocha-chai-lib)
-[![NPM Downloads](https://img.shields.io/npm/dm/node-mocha-chai-lib.svg)](https://npmjs.org/package/node-mocha-chai-lib)
-[![CircleCI](https://circleci.com/gh/xqstencils/node-mocha-chai-lib.svg?style=svg)](https://circleci.com/gh/xqstencils/node-mocha-chai-lib)
-[![Build Status](https://travis-ci.org/xqstencils/node-mocha-chai-lib.svg?branch=master)](https://travis-ci.org/xqstencils/node-mocha-chai-lib)
+[![NPM Version](https://img.shields.io/npm/v/@xq-stencil/node-mocha-chai-lib.svg)](https://npmjs.org/package/@xq-stencil/node-mocha-chai-lib)
+[![NPM Downloads](https://img.shields.io/npm/dm/@xq-stencil/node-mocha-chai-lib.svg)](https://npmjs.org/package/@xq-stencil/node-mocha-chai-lib)
+[![Build Status](https://circleci.com/gh/xqstencils/node-mocha-chai-lib.svg?style=svg)](https://circleci.com/gh/xqstencils/node-mocha-chai-lib)
 
-[![NPM](https://nodei.co/npm/node-mocha-chai-lib.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-mocha-chai-lib/)
+[![NPM](https://nodei.co/npm/@xq-stencil/node-mocha-chai-lib.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@xq-stencil/node-mocha-chai-lib/)
 
 ## Features:
 
 * Include CI Script to run the test and publish your package.
-* Support ES6 syntax
+* Support ES6 syntax.
 * Support ESlint to check the code.
 * Support Mocha to test your code.
 
@@ -21,7 +20,13 @@ This is a stencils for common package base on node.
 
 ### Setup
 
-Copy this stencil and replace `node-mocha-chai-lib` with your package name.
+Copy this stencil and replace `@xq-stencil/node-mocha-chai-lib` with your package name.
+
+### Install dependencies
+
+```
+$ yarn install
+```
 
 ### Linting
 
@@ -53,8 +58,8 @@ $ yarn build
 
 ### Setup CI
 
-* Update the travis-ci config travis.yml
-* Setup the ci into travis-ci.
+* Update the circleci config
+* Setup the ci into circleci site.
 
 
 ### Publish your package
@@ -65,4 +70,4 @@ $ yarn release
 
 ## License
 
-node-mocha-chai-lib is released under the MIT license.
+node-mocha-chai-lib is released under the [MIT license](https://github.com/xqstencils/node-mocha-chai-lib/blob/master/LICENSE).

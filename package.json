@@ -1,6 +1,6 @@
 {
   "name": "@xq-stencil/node-mocha-chai-lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Stencil based on node with mocha and chai",
   "main": "lib/index.js",
   "engines": {
