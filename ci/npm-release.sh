@@ -5,4 +5,4 @@ CURRENT_VERSION=`cat package.json | jq -r .version`
 
 yarn install
 yarn build
-yarn publish --new-version $CURRENT_VERSION
+yarn publish --new-version $CURRENT_VERSION --access public
