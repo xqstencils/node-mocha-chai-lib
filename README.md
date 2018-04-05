@@ -20,7 +20,11 @@ This is a stencils for common package base on node.
 
 ### Setup
 
-Copy this stencil and replace `@xq-stencil/node-mocha-chai-lib` with your package name.
+Clone this stencil and replace `@xq-stencil/node-mocha-chai-lib` with your package name.
+
+```
+$ git clone git@github.com:xqstencils/node-mocha-chai-lib.git
+```
 
 ### Install dependencies
 

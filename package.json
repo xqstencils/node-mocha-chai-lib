@@ -1,6 +1,6 @@
 {
   "name": "@xq-stencil/node-mocha-chai-lib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Stencil based on node with mocha and chai",
   "main": "lib/index.js",
   "engines": {
@@ -11,12 +11,12 @@
   ],
   "scripts": {
     "babel": "babel src -d lib",
-    "babel:watch": "watch 'npm run babel' ./src",
+    "babel:watch": "watch 'yarn babel' ./src",
     "build": "yarn clean && yarn babel",
     "lint": "eslint src test",
     "test:unit": "mocha -r babel-register test/",
     "test": "yarn lint && yarn test:unit",
-    "test:watch": "watch 'npm run test' ./src ./test",
+    "test:watch": "watch 'yarn test' ./src ./test",
     "clean": "rm -rf ./lib",
     "release:git": "/bin/bash ./ci/git-release.sh",
     "release:npm": "/bin/bash ./ci/npm-release.sh",
