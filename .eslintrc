@@ -1,0 +1,20 @@
+{
+  parser: "babel-eslint",
+  extends: [
+    "eslint:recommended"
+  ],
+  env: {
+    es6: true,
+    node: true,
+    mocha: true,
+  },
+  parserOptions: {
+    ecmaVersion: 7,
+    ecmaFeatures: {},
+    sourceType: "module"
+  },
+  rules: {
+    indent: ["error", 2],
+    no-empty-pattern: 0
+  }
+}

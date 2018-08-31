@@ -1,5 +1,5 @@
 # Node Mocha Chai lib stencil
-This is a stencils for common package base on node.
+This is a stencils for common package base on node and mocha.
 
 ## Current Status:
 
@@ -11,10 +11,12 @@ This is a stencils for common package base on node.
 
 ## Features:
 
-* Include CI Script to run the test and publish your package.
-* Support ES6 syntax.
+* Run the test and publish your package with ci.
+* Support CircleCi for pipeline.
+* Support ES7 & ES6 syntax.
 * Support ESlint to check the code.
-* Support Mocha to test your code.
+* Support Mocha & Chai to test your code.
+* Support Nsp to do security check for the dependencis.
 
 ## Development:
 
@@ -32,6 +34,20 @@ $ git clone git@github.com:xqstencils/node-mocha-chai-lib.git
 $ yarn install
 ```
 
+### Compile code
+
+```
+$ yarn babel
+# or run babel in watch mode
+$ yarn babel:watch
+```
+
+### Generate distribution code
+
+```
+$ yarn build
+```
+
 ### Linting
 
 ```
@@ -46,18 +62,10 @@ $ yarn test
 $ yarn test:watch
 ```
 
-### Compile code
+### Security check
 
 ```
-$ yarn babel
-# or run babel in watch mode
-$ yarn babel:watch
-```
-
-### Generate distribution code
-
-```
-$ yarn build
+$ yarn security:check
 ```
 
 ### Setup CI

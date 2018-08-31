@@ -1,7 +1,7 @@
 {
   "name": "@xq-stencil/node-mocha-chai-lib",
   "version": "1.0.4",
-  "description": "Stencil based on node with mocha and chai",
+  "description": "A library stencil based on node and test used mocha and chai",
   "main": "lib/index.js",
   "engines": {
     "node": ">= 6"
@@ -10,14 +10,14 @@
     "lib"
   ],
   "scripts": {
+    "clean": "rm -rf ./lib",
     "babel": "babel src -d lib",
     "babel:watch": "watch 'yarn babel' ./src",
     "build": "yarn clean && yarn babel",
     "lint": "eslint src test",
-    "test:unit": "mocha -r babel-register test/",
-    "test": "yarn lint && yarn test:unit",
+    "test": "nyc mocha test/",
     "test:watch": "watch 'yarn test' ./src ./test",
-    "clean": "rm -rf ./lib",
+    "security:check": "nsp check --reporter summary",
     "release:git": "/bin/bash ./ci/git-release.sh",
     "release:npm": "/bin/bash ./ci/npm-release.sh",
     "release": "yarn release:git && yarn release:npm"
@@ -25,13 +25,17 @@
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-istanbul": "^5.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
-    "eslint": "^4.19.1",
-    "mocha": "^5.0.5",
+    "eslint": "^5.4.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.0.3",
+    "nsp": "^3.2.1",
+    "nyc": "^13.0.1",
     "watch": "^1.0.2"
   },
   "repository": {
