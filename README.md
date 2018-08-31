@@ -1,5 +1,5 @@
 # Node Mocha Chai lib stencil
-This is a stencils for common package base on node and mocha.
+This is a stencil for common package base on node and mocha.
 
 ## Current Status:
 
