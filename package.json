@@ -43,9 +43,16 @@
     "url": "git+https://github.com/xqstencils/node-mocha-chai-lib.git"
   },
   "keywords": [
-    "node"
+    "lib",
+    "node",
+    "chai",
+    "babel",
+    "mocha",
+    "eslint",
+    "security",
+    "circleci"
   ],
-  "author": "Xiaoqi Cao<thomascxq@gmail.com>",
+  "author": "Xiaoqi Cao<xqcao@xqcao.com>",
   "contributors": [
     "Xiaoqi Cao"
   ],
